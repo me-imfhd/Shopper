@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>responsive nav</title>
+</head>
+<style>
+  nav div{
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  @media screen and (orientation:landscape) {
+    nav {
+      display: flex;
+    }
+    nav div {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (orientation:portrait) {
+    nav {
+      display: grid;
+      grid-template-columns: 12fr;
+    }
+    nav div {
+      margin-bottom: 20px;
+    }
+  }
+  nav div:hover{
+    background-color: yellow;
+    color: black;
+  }
+</style>
+<body>
+  <nav>
+    <div>HOME</div>
+    <div>ABOUT</div>
+    <div>CONTACT</div>
+    <div>BLOG</div>
+  </nav>
+</body>
+</html>
